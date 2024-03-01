@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gem's Jewerlys</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+
+    <div class="navbar">
+        <div class="logo">
+            <img class="logo-img" src="logo.jpg" width="155px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Products</a></li>
+                <li><a href="#content-section">Cart</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<!--CONTENT-->
+
+    <div class="container">
+         <img src="Products/web (1).webp" width="400px">
+         <div class="text-content">
+            <h1>Shop and Sell <br> Your Heart out!!</h1>
+            <p><i>An online Shopping platform for your desire.</i></p>
+            <a href="products.html" class="btn">Click for More!</a>
+        </div>
+    </div>
+
+<!-- CONTENT PRODUCTS -->
+
+    <div class="container2">
+        <h1>Featured Products</h1>
+        <div class="row">
+            <div class="col">
+                <img src="Products/hello (12).jpg" width="350px">
+            </div>
+            <div class="col">
+                <img src="Products/hello (10).jpg" width="350px">
+            </div>
+            <div class="col">
+                <img src="Products/hello (17).jpg" width="350px">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-image">
+        <span>&times; </span>
+        <img src="Products/hello (12).jpg" width="40%">
+    </div>
+
+<script>
+    document.querySelectorAll('.row img').forEach(image =>{
+        image.onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+    });
+
+document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

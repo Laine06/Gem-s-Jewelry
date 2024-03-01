@@ -1,0 +1,147 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: #eee;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+nav {
+    flex: 1;
+    align-items: center;
+    text-align: right;
+    margin-right: 50px;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 50px;
+    color: gold;
+    font-family: myFont;
+ 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.text-content {
+    font-size: xx-large;
+    margin-left: 100px;
+    font-family: myFont;
+}
+
+.container img {
+    border-radius: 50%;
+    margin: 25px;
+    margin-left: 100px;
+    box-shadow: 10px 15px 15px black;
+}
+
+.container .btn {
+    padding: 3px 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+    background-color: gray;
+    border-radius:15px;
+}
+
+/*          CONTENT         */
+
+
+.container2 {
+    margin-top: 200px;
+}
+
+.container2 h1 {
+    text-align: center;
+    font-family: myFont;
+    font-size: 60px;
+}
+
+.container2 .row {
+    text-align: center;
+    cursor: pointer;
+    align-items: flex-start;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin: 15px 1px;
+}
+
+.col img {
+    box-shadow: 2px 7px 7px black;
+    border-radius: 30%;
+    width: 90%;
+    padding: 1px;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container2 .row .col:hover img {
+    transform: scale(1.030);
+}
+
+.popup-image {
+    position: fixed;
+    top: 0; left:0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image span{
+    position: absolute;
+    top:0; right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px){
+    .popup-image img {
+        width: 95%;
+    }
+}
